@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240717040200">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.tailwindcss.com?_v=20240717040200"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					screens: {
+						'sm': '640px',
+						// => @media (min-width: 640px) { ... }
+
+						'md': '768px',
+						// => @media (min-width: 768px) { ... }
+
+						'lg': '1024px',
+						// => @media (min-width: 1024px) { ... }
+
+						'xl': '1440px',
+						// => @media (min-width: 1280px) { ... }
+
+						'2xl': '1536px',
+						// => @media (min-width: 1536px) { ... }
+					}
+				},
+			},
+		}
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+
+			<div class="header__content">
+				<div class="header__top top-header">
+
+				</div>
+				<div class="header__center center-header">
+					<div class="header-logo">
+						<div class="header-logo__container">
+							<div class="flex items-center gap-3 justify-between">
+								<div class="flex items-center">
+									<a href="#" class="logo">
+										<img src="img/logo.webp" alt="Logo">
+									</a>
+									<div class="header-logo__text xl:text-2xl lg:text-lg text-white uppercase pl-14 font-medium">
+										<p>интернет - магазин автомасел и запчастей</p>
+									</div>
+								</div>
+
+								<div class="center-header__actions header-contacts flex flex-col text-center">
+									<a class="header-contacts__phone text-white leading-none mb-1" href="tel:+78722550506">+7 (8722) 55-05-06</a>
+									<span class="header-contacts__schedule block text-white leading-none">пн—пт с 9:00 до 18:00</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="header__bottom bottom-header mt-8 mb-4">
+					<div class="bottom-header__container">
+						<div class="bottom-header__content flex items-center gap-4 justify-between">
+							<div class="header__location location-block">
+								<button type="button" class="location-block__button">
+
+									Махачкала
+								</button>
+								<div class="location-block__list">
+									<ul>
+										<li>
+											<a href="#">
+												Львoв
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Львoв
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="header__menu menu">
+								<button type="button" class="menu__icon icon-menu"><span></span></button>
+								<nav class="menu__body">
+									<ul>
+										<li>
+											<a href="#">
+												Компания
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												СТО
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Бренды
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												СССР
+
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Новости
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Акции
+											</a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+							<div class="header-actions">
+								<div class="header-actions__list">
+									<a href="#" class="header-actions__item action-item">
+										<div class="action-item__icon">
+											<svg class="action-item__svg">
+												<use xlink:href="img/icons/icons.svg#favorite"></use>
+											</svg>
+										</div>
+										<span class="action-item__caption">
+											Избранное
+										</span>
+									</a>
+									<a href="#" class="header-actions__item action-item">
+										<div class="action-item__icon">
+											<svg class="action-item__svg">
+												<use xlink:href="img/icons/icons.svg#cart"></use>
+											</svg>
+										</div>
+										<span class="action-item__caption">
+											Корзина
+										</span>
+									</a>
+									<a href="#" class="header-actions__item action-item">
+										<div class="action-item__icon">
+											<svg class="action-item__svg">
+												<use xlink:href="img/icons/icons.svg#user"></use>
+											</svg>
+										</div>
+										<span class="action-item__caption">
+											Войти
+										</span>
+									</a>
+								</div>
+							</div>
+							<!-- /.header-actions -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</header>
+		<main class="page">
+			<section class="main-page">
+				<div class="main-page__container">
+					<div class="main-page__content">
+						<aside class="main-page__sidebar sidebar-main">
+
+						</aside>
+						<div class="main-page__content content-main">
+							<div class="content-main__banners">
+
+							</div>
+							<!-- /.content-main__banners -->
+							<div class="content-main__partners">
+
+							</div>
+							<!-- /.content-main__partners -->
+							<div class="content-main__populars-goods populars-goods">
+								<div class="populars-goods__content">
+									<div class="populars-goods__header">
+										<span class="populars-goods__header-title">
+											Популярные товары
+										</span>
+										<div class="populars-goods__search">
+											<div class="search-block">
+												<div class="search-block-group input-group">
+													<input type="text" class="seacrh-input" placeholder="Recipient's username">
+													<span class="input-group-text">@example.com</span>
+												</div>
+
+											</div>
+										</div>
+									</div>
+									<div class="populars-goods__list">
+										<div class="populars-goods__product product">
+
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<!-- /.content-main__populars-goods populars-goods -->
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- /.main-page -->
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20240717040200"></script>
+</body>
+
+</html>
