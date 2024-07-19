@@ -261,6 +261,7 @@
 			</div>
 
 		</header>
+
 		<div class="catalog-menu">
 
 			<div class="catalog-menu__container">
@@ -712,20 +713,43 @@
 
 		</div>
 		<!-- /.catalog-menu -->
-		<main class="page">
-			<section class="main-page">
-				<div class="main-page__container">
-					<div class="main-page__wrapper relative catalog-menu-wrap">
-						<aside class="main-page__sidebar sidebar-main">
-							<div class="sidebar-main__body">
-								<div class="sidebar-main__header flex flex-col gap-2 items-start mb-5">
-									<button type="button" class="button button-lg button-primary button-catalog">
-										<span>Каталог</span>
-										<span>Закрыть</span>
-									</button>
-									<div class="search-block">
+		<main class="page page-catalog">
+			<div class="page-topbar">
+				<div class="page-topbar__container">
+					<div class="page-topbar__content">
+						<div class="breadcrumbs">
+							<div class="breadcrumbs__list">
+								<ul>
+									<li>
+										<a href="#">
+											Главная
+										</a>
+									</li>
+									<li class="active">
+										<a href="#">
+											Каталог
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- /.breadcrumbs -->
+						<button type="button" class="button button-lg button-filter">
+							<span>Фильтр</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<section class="catalog-page section-margin-b-md">
+				<div class="catalog-page__container">
+					<div class="catalog-page__wrapper relative catalog-menu-wrap">
+						<aside class="catalog-page__sidebar sidebar-catalog">
+							<div class="sidebar-catalog__body">
+								<div class="sidebar-catalog__header flex flex-col gap-2 items-start mb-4">
+
+									<div class="search-block search-block--red2">
 										<div class="search-block-group input-group">
-											<input type="text" class="search-input" placeholder="Поиск по сайту">
+											<input type="text" class="search-input" placeholder="Поиск">
 											<button type="button" class="input-group-button">
 												<svg class="action-item__svg">
 													<use xlink:href="img/icons/icons.svg#search"></use>
@@ -735,538 +759,327 @@
 
 									</div>
 								</div>
-								<div class="sidebar-main__content">
-									<div data-showmore="items" class="sidebar-brands">
-										<div data-showmore-content="5" class="sidebar-brands__content">
-											<ul>
-												<li><a href="#">Лукойл</a></li>
-												<li>
-													<a href="#">
-														Toboil
-
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														Rowe
-
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														Mannol
-
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														Lomarc
-
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														Sakura
-
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														Masuma
-													</a>
-												</li>
-
-											</ul>
+								<div class="sidebar-catalog__content">
+									<div class="sidebar-catalog__row">
+										<div data-spollers class="catalog-spollers spollers spollers-type-two">
+											<details class="spollers__item">
+												<summary class="spollers__title">Популярные</summary>
+												<div class="spollers__body">
+													<div class="catalog-spollers__options options-filter">
+														<div class="checkbox">
+															<input id="c_1" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_1" class="checkbox__label"><span class="checkbox__text">0,5 л</span></label>
+														</div>
+														<div class="checkbox">
+															<input id="c_2" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_2" class="checkbox__label"><span class="checkbox__text">1 л</span></label>
+														</div>
+														<div class="checkbox">
+															<input id="c_3" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_3" class="checkbox__label"><span class="checkbox__text">2,0 л</span></label>
+														</div>
+														<div class="checkbox">
+															<input id="c_4" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_4" class="checkbox__label"><span class="checkbox__text">3,0 л</span></label>
+														</div>
+														<div class="checkbox">
+															<input id="c_5" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_5" class="checkbox__label"><span class="checkbox__text">4,0 л</span></label>
+														</div>
+														<div class="checkbox">
+															<input id="c_6" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_6" class="checkbox__label"><span class="checkbox__text">5,0 л</span></label>
+														</div>
+														<div class="reset-button">
+															<button type="buttton" class="button reset-filters">Сбросить</button>
+														</div>
+													</div>
+												</div>
+											</details>
+											<details class="spollers__item">
+												<summary class="spollers__title">Производитель</summary>
+												<div class="spollers__body">
+													<div class="catalog-spollers__options options-filter">
+														<div class="checkbox">
+															<input id="c_1" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_1" class="checkbox__label"><span class="checkbox__text">0,5 л</span></label>
+														</div>
+														<div class="checkbox">
+															<input id="c_2" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_2" class="checkbox__label"><span class="checkbox__text">1 л</span></label>
+														</div>
+														<div class="checkbox">
+															<input id="c_3" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_3" class="checkbox__label"><span class="checkbox__text">2,0 л</span></label>
+														</div>
+														<div class="checkbox">
+															<input id="c_4" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_4" class="checkbox__label"><span class="checkbox__text">3,0 л</span></label>
+														</div>
+														<div class="checkbox">
+															<input id="c_5" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_5" class="checkbox__label"><span class="checkbox__text">4,0 л</span></label>
+														</div>
+														<div class="checkbox">
+															<input id="c_6" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_6" class="checkbox__label"><span class="checkbox__text">5,0 л</span></label>
+														</div>
+														<div class="reset-button">
+															<button type="buttton" class="button reset-filters">Сбросить</button>
+														</div>
+													</div>
+												</div>
+											</details>
+											<details class="spollers__item">
+												<summary class="spollers__title">Категория</summary>
+												<div class="spollers__body">
+													<div class="catalog-spollers__options options-filter">
+														<div class="checkbox">
+															<input id="c_1" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_1" class="checkbox__label"><span class="checkbox__text">0,5 л</span></label>
+														</div>
+														<div class="checkbox">
+															<input id="c_2" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_2" class="checkbox__label"><span class="checkbox__text">1 л</span></label>
+														</div>
+														<div class="checkbox">
+															<input id="c_3" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_3" class="checkbox__label"><span class="checkbox__text">2,0 л</span></label>
+														</div>
+														<div class="checkbox">
+															<input id="c_4" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_4" class="checkbox__label"><span class="checkbox__text">3,0 л</span></label>
+														</div>
+														<div class="checkbox">
+															<input id="c_5" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_5" class="checkbox__label"><span class="checkbox__text">4,0 л</span></label>
+														</div>
+														<div class="checkbox">
+															<input id="c_6" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_6" class="checkbox__label"><span class="checkbox__text">5,0 л</span></label>
+														</div>
+														<div class="reset-button">
+															<button type="buttton" class="button reset-filters">Сбросить</button>
+														</div>
+													</div>
+												</div>
+											</details>
+											<details class="spollers__item">
+												<summary class="spollers__title">Объем</summary>
+												<div class="spollers__body">
+													<div class="catalog-spollers__options options-filter">
+														<div class="checkbox">
+															<input id="c_1" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_1" class="checkbox__label"><span class="checkbox__text">0,5 л</span></label>
+														</div>
+														<div class="checkbox">
+															<input id="c_2" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_2" class="checkbox__label"><span class="checkbox__text">1 л</span></label>
+														</div>
+														<div class="checkbox">
+															<input id="c_3" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_3" class="checkbox__label"><span class="checkbox__text">2,0 л</span></label>
+														</div>
+														<div class="checkbox">
+															<input id="c_4" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_4" class="checkbox__label"><span class="checkbox__text">3,0 л</span></label>
+														</div>
+														<div class="checkbox">
+															<input id="c_5" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_5" class="checkbox__label"><span class="checkbox__text">4,0 л</span></label>
+														</div>
+														<div class="checkbox">
+															<input id="c_6" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_6" class="checkbox__label"><span class="checkbox__text">5,0 л</span></label>
+														</div>
+														<div class="reset-button">
+															<button type="buttton" class="button reset-filters">Сбросить</button>
+														</div>
+													</div>
+												</div>
+											</details>
+											<details class="spollers__item">
+												<summary class="spollers__title">Маркировка</summary>
+												<div class="spollers__body">
+													<div class="catalog-spollers__options options-filter">
+														<div class="checkbox">
+															<input id="c_1" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_1" class="checkbox__label"><span class="checkbox__text">0,5 л</span></label>
+														</div>
+														<div class="checkbox">
+															<input id="c_2" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_2" class="checkbox__label"><span class="checkbox__text">1 л</span></label>
+														</div>
+														<div class="checkbox">
+															<input id="c_3" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_3" class="checkbox__label"><span class="checkbox__text">2,0 л</span></label>
+														</div>
+														<div class="checkbox">
+															<input id="c_4" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_4" class="checkbox__label"><span class="checkbox__text">3,0 л</span></label>
+														</div>
+														<div class="checkbox">
+															<input id="c_5" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_5" class="checkbox__label"><span class="checkbox__text">4,0 л</span></label>
+														</div>
+														<div class="checkbox">
+															<input id="c_6" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_6" class="checkbox__label"><span class="checkbox__text">5,0 л</span></label>
+														</div>
+														<div class="reset-button">
+															<button type="buttton" class="button reset-filters">Сбросить</button>
+														</div>
+													</div>
+												</div>
+											</details>
 										</div>
-										<button hidden data-showmore-button type="button" class="sidebar-brands__more"><span>Показать больше</span><span>Скрыть</span></button>
+									</div>
+									<div class="sidebar-catalog__row">
+										<div class="sidebar-catalog__price">
+											<span>
+												Цена
+											</span>
+											<div class="range-box">
+
+												<div class="grid grid-cols-2 gap-3 mb-3">
+													<div class="range-col flex gap-2 pt-3">
+														<span>От</span>
+														<input type="number" class="input from-price">
+													</div>
+													<div class="range-col flex gap-2 pt-3">
+														<span>До</span>
+														<input type="number" class="input to-price">
+													</div>
+												</div>
+												<div class="slider-range"></div>
+
+											</div>
+											<!-- <div id="tooltip_container"></div> -->
+
+										</div>
+									</div>
+									<div class="sidebar-catalog__row row-actions">
+										<a href="#" class="button button-lg button-primary">Показать 5 товаров</a>
+										<button type="button" class="button button-lg button-border--red">Сбросить</button>
 									</div>
 								</div>
 
 							</div>
 						</aside>
-						<div class="main-page__content content-main">
-							<div class="content-main__banners banners-main section-margin-b-md">
-								<div class="banners-main__content">
-									<div class="banners-main__slider swiper">
-										<div class="banners-main__wrapper swiper-wrapper">
+						<div class="catalog-page__content content-catalog">
+							<div class="content-catalog__catalog catalog-list">
+								<div class="catalog-list__list">
 
-											<div class="banners-main__slide swiper-slide slide slide-info slide-login">
-												<div class="slide__title mb-4">
-													Личный кабинет
-												</div>
-												<div class="slide__body">
-
-													<div class="slide__content">
-														<span>Совершайте покупки, получайте бонусы, отслеживайте заказы</span>
-
-													</div>
-													<div class="slide__footer">
-														<a href="#" class="button button-lg button-white">Войти</a>
-													</div>
-												</div>
-											</div>
-
-
-											<div class="banners-main__slide swiper-slide slide slide-info slide-certificates">
-												<div class="slide__title mb-4">
-													Сертификаты
-												</div>
-												<div class="slide-certificates__slider swiper">
-													<div class="slide-certificates__wrapper swiper-wrapper">
-														<div class="slide-certificates__slide swiper-slide slide slide-banner">
-															<div class="slide__banner">
-																<img src="img/banners/01.webp" alt="Image">
-															</div>
-														</div>
-														<div class="slide-certificates__slide swiper-slide slide slide-banner">
-															<div class="slide__banner">
-																<img src="img/banners/01.webp" alt="Image">
-															</div>
-														</div>
-														<div class="slide-certificates__slide swiper-slide slide slide-banner">
-															<div class="slide__banner">
-																<img src="img/banners/01.webp" alt="Image">
-															</div>
-														</div>
-														<div class="slide-certificates__slide swiper-slide slide slide-banner">
-															<div class="slide__banner">
-																<img src="img/banners/01.webp" alt="Image">
-															</div>
-														</div>
-													</div>
-													<div class="slider-pagination-1">
-														<div class="swiper-pagination"></div>
-													</div>
-
-												</div>
-											</div>
-
-											<div class="banners-main__slide swiper-slide slide slide-banner slide-promo">
-												<div class="slide__title mb-4">
-													Акции
-												</div>
-												<a href="#" class="slide__banner">
-													<img src="img/banners/02.webp" alt="Image">
-												</a>
-											</div>
-											<div class="banners-main__slide swiper-slide slide slide-banner slide-promo">
-
-												<a href="#" class="slide__banner">
-													<img src="img/banners/03.webp" alt="Image">
-												</a>
-											</div>
-											<div class="banners-main__slide swiper-slide slide slide-info slide-news">
-												<div class="slide__title mb-4">
-													Новости
-												</div>
-												<div class="slide__body">
-
-													<div class="slide__content">
-														<span>Открытие кафе на территории сервис зоны на Казбекова.</span>
-
-													</div>
-													<div class="slide-news__image">
-														<img src="img/banners/image.webp" alt="Image">
-													</div>
-												</div>
-											</div>
-											<div class="banners-main__slide swiper-slide slide slide-info slide-news">
-
-												<div class="slide__body">
-
-													<div class="slide__content">
-														<span>Дилерство Teboil и Lemarc</span>
-
-													</div>
-													<div class="slide-news__image">
-														<img src="https://picsum.photos/200/300" alt="Image">
-													</div>
-												</div>
-											</div>
-
+									<a href="#" class="catalog-list__brand brand">
+										<div class="brand__body">
+											<div class="brand__image"><img src="img/catalog/01.webp" alt="Brand Image 01"></div>
+											<div class="brand__title"> Лукойл</div>
 										</div>
-										<button type="button" class="swiper-button-prev slider-button-1">
-											<svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
-												<line y1="-0.5" x2="14.085" y2="-0.5" transform="matrix(-0.725276 -0.688458 -0.725276 0.688458 11 20)" stroke="#A1A1A1" />
-												<line y1="-0.5" x2="14.5089" y2="-0.5" transform="matrix(0.704086 -0.710115 -0.745737 -0.66624 0.78418 10.303)" stroke="#A1A1A1" />
-											</svg>
-										</button>
-										<button type="button" class="swiper-button-next slider-button-1">
-											<svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
-												<line y1="-0.5" x2="14.085" y2="-0.5" transform="matrix(0.725276 -0.688458 0.725276 0.688458 1 20)" stroke="#A1A1A1" />
-												<line y1="-0.5" x2="14.5089" y2="-0.5" transform="matrix(-0.704086 -0.710115 0.745737 -0.66624 11.2158 10.303)" stroke="#A1A1A1" />
-											</svg>
-										</button>
-
-									</div>
+									</a><a href="#" class="catalog-list__brand brand">
+										<div class="brand__body">
+											<div class="brand__image"><img src="img/catalog/02.webp" alt="Brand Image 02"></div>
+											<div class="brand__title">Mannol</div>
+										</div>
+									</a><a href="#" class="catalog-list__brand brand">
+										<div class="brand__body">
+											<div class="brand__image"><img src="img/catalog/03.webp" alt="Brand Image 03"></div>
+											<div class="brand__title">ROWE</div>
+										</div>
+									</a><a href="#" class="catalog-list__brand brand">
+										<div class="brand__body">
+											<div class="brand__image"><img src="img/catalog/04.webp" alt="Brand Image 04"></div>
+											<div class="brand__title">TEBOIL</div>
+										</div>
+									</a><a href="#" class="catalog-list__brand brand">
+										<div class="brand__body">
+											<div class="brand__image"><img src="img/catalog/05.webp" alt="Brand Image 05"></div>
+											<div class="brand__title">KIXX</div>
+										</div>
+									</a><a href="#" class="catalog-list__brand brand">
+										<div class="brand__body">
+											<div class="brand__image"><img src="img/catalog/06.webp" alt="Brand Image 06"></div>
+											<div class="brand__title">LEMARC</div>
+										</div>
+									</a><a href="#" class="catalog-list__brand brand">
+										<div class="brand__body">
+											<div class="brand__image"><img src="img/catalog/07.webp" alt="Brand Image 07"></div>
+											<div class="brand__title">LAVR</div>
+										</div>
+									</a><a href="#" class="catalog-list__brand brand">
+										<div class="brand__body">
+											<div class="brand__image"><img src="img/catalog/08.webp" alt="Brand Image 08"></div>
+											<div class="brand__title">KUDO</div>
+										</div>
+									</a><a href="#" class="catalog-list__brand brand">
+										<div class="brand__body">
+											<div class="brand__image"><img src="img/catalog/09.webp" alt="Brand Image 09"></div>
+											<div class="brand__title">KERRY; KULT; DONEWELL</div>
+										</div>
+									</a><a href="#" class="catalog-list__brand brand">
+										<div class="brand__body">
+											<div class="brand__image"><img src="img/catalog/010.webp" alt="Brand Image 010"></div>
+											<div class="brand__title">WD-40</div>
+										</div>
+									</a><a href="#" class="catalog-list__brand brand">
+										<div class="brand__body">
+											<div class="brand__image"><img src="img/catalog/011.webp" alt="Brand Image 011"></div>
+											<div class="brand__title">POXIPOL</div>
+										</div>
+									</a><a href="#" class="catalog-list__brand brand">
+										<div class="brand__body">
+											<div class="brand__image"><img src="img/catalog/012.webp" alt="Brand Image 012"></div>
+											<div class="brand__title">KNECHT / MAHLE</div>
+										</div>
+									</a><a href="#" class="catalog-list__brand brand">
+										<div class="brand__body">
+											<div class="brand__image"><img src="img/catalog/013.webp" alt="Brand Image 013"></div>
+											<div class="brand__title">SCT</div>
+										</div>
+									</a><a href="#" class="catalog-list__brand brand">
+										<div class="brand__body">
+											<div class="brand__image"><img src="img/catalog/014.webp" alt="Brand Image 014"></div>
+											<div class="brand__title">BIG FILTER</div>
+										</div>
+									</a><a href="#" class="catalog-list__brand brand">
+										<div class="brand__body">
+											<div class="brand__image"><img src="img/catalog/015.webp" alt="Brand Image 015"></div>
+											<div class="brand__title">SAKURA</div>
+										</div>
+									</a><a href="#" class="catalog-list__brand brand">
+										<div class="brand__body">
+											<div class="brand__image"><img src="img/catalog/016.webp" alt="Brand Image 016"></div>
+											<div class="brand__title">NIBK Тормозные колодки</div>
+										</div>
+									</a><a href="#" class="catalog-list__brand brand">
+										<div class="brand__body">
+											<div class="brand__image"><img src="img/catalog/017.webp" alt="Brand Image 017"></div>
+											<div class="brand__title">TORCH Свечи зажигания</div>
+										</div>
+									</a><a href="#" class="catalog-list__brand brand">
+										<div class="brand__body">
+											<div class="brand__image"><img src="img/catalog/018.webp" alt="Brand Image 018"></div>
+											<div class="brand__title">FORTECH; NAC</div>
+										</div>
+									</a><a href="#" class="catalog-list__brand brand">
+										<div class="brand__body">
+											<div class="brand__image"><img src="img/catalog/019.webp" alt="Brand Image 019"></div>
+											<div class="brand__title">JS ASAKASHI</div>
+										</div>
+									</a><a href="#" class="catalog-list__brand brand">
+										<div class="brand__body">
+											<div class="brand__image"><img src="img/catalog/020.webp" alt="Brand Image 020"></div>
+											<div class="brand__title">COOLSTREAM</div>
+										</div>
+									</a>
 								</div>
 							</div>
-							<!-- /.content-main__banners -->
-							<div class="content-main__partners partners-main section-margin-b-md">
-								<!-- Оболонка слайдера -->
-								<div class="partners-main__slider swiper">
-									<!-- Частина слайдера, що рухається -->
-									<div class="partners-main__wrapper swiper-wrapper">
-										<!-- Слайд -->
-										<div class="partners-main__slide swiper-slide slide slide-bg-white">
-											<img src="img/partners/partner-1.webp" alt="Image">
-										</div>
-										<div class="partners-main__slide swiper-slide slide slide-bg-white">
-											<img src="img/partners/partner-2.webp" alt="Image">
-										</div>
-										<div class="partners-main__slide swiper-slide slide slide-bg-white">
-											<img src="img/partners/partner-4.webp" alt="Image">
-										</div>
-										<div class="partners-main__slide swiper-slide slide slide-bg-white">
-											<img src="img/partners/partner-5.webp" alt="Image">
-										</div>
-										<div class="partners-main__slide swiper-slide slide slide-bg-white">
-											<img src="img/partners/partner-6.webp" alt="Image">
-										</div>
-										<div class="partners-main__slide swiper-slide slide slide-bg-white">
-											<img src="img/partners/partner-7.webp" alt="Image">
-										</div>
-										<div class="partners-main__slide swiper-slide slide slide-bg-blue-2">
-											<img src="img/partners/partner-8.webp" alt="Image">
-										</div>
-										<div class="partners-main__slide swiper-slide slide slide-bg-blue">
-											<img src="img/partners/partner-9.webp" alt="Image">
-										</div>
-										<div class="partners-main__slide swiper-slide slide slide-bg-white">
-											<img src="img/partners/partner-10.webp" alt="Image">
-										</div>
-										<div class="partners-main__slide swiper-slide slide slide-bg-blue">
-											<img src="img/partners/partner-3.webp" alt="Image">
-										</div>
+							<!-- /.content-catalog__catalog -->
 
-									</div>
-
-								</div>
-							</div>
-							<!-- /.content-main__partners -->
-							<div class="content-main__populars-goods populars-goods section-margin-b-md">
-								<div class="populars-goods__content">
-									<div class="populars-goods__header mb-6">
-										<span class="section-caption populars-goods__header-title">
-											Популярные товары
-										</span>
-										<div class="populars-goods__search">
-											<div class="search-block">
-												<div class="search-block-group input-group">
-													<input type="text" class="search-input" placeholder="Поиск по сайту">
-													<button type="button" class="input-group-button">
-														<svg class="action-item__svg">
-															<use xlink:href="img/icons/icons.svg#search"></use>
-														</svg>
-													</button>
-												</div>
-
-											</div>
-										</div>
-									</div>
-									<div class="populars-goods__list">
-										<div class="populars-goods__product product">
-											<div class="product__body">
-												<div class="product__header">
-													<a href="#" class="product-image__link">
-														<img class="product-image__image ibg" src="img/goods/image.webp" alt="Image">
-													</a>
-
-													<div class="product__stickers">
-														<span class="product__stickers-item product__stickers-item--favorite">
-															<svg class="action-item__svg">
-																<use xlink:href="img/icons/icons.svg#favorite"></use>
-															</svg>
-														</span>
-													</div>
-												</div>
-												<div class="product__wrapper">
-													<div class="product__content">
-														<h6 class="product__title">
-															Масло моторное
-														</h6>
-														<div class="product__descr">
-															<p>
-																LUKOIL GENESIS ARMORTECH 5W-40
-															</p>
-														</div>
-														<div class="product__price price-box">
-															<div class="price">
-																868,00 ₽
-															</div>
-														</div>
-													</div>
-													<div class="product__footer">
-														<a href="#" class="button button-lg button-primary">
-															В корзину
-														</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="populars-goods__product product">
-											<div class="product__body">
-												<div class="product__header">
-													<a href="#" class="product-image__link">
-														<img class="product-image__image ibg" src="img/goods/image-2.webp" alt="Image">
-													</a>
-
-													<div class="product__stickers">
-														<span class="product__stickers-item product__stickers-item--favorite">
-															<svg class="action-item__svg">
-																<use xlink:href="img/icons/icons.svg#favorite"></use>
-															</svg>
-														</span>
-													</div>
-												</div>
-												<div class="product__wrapper">
-													<div class="product__content">
-														<h6 class="product__title">
-															Масло моторное
-														</h6>
-														<div class="product__descr">
-															<p>
-																LUKOIL GENESIS ARMORTECH 5W-40 LUKOIL GENESIS ARMORTECH 5W-40 LUKOIL GENESIS ARMORTECH 5W-40
-															</p>
-														</div>
-														<div class="product__price price-box">
-															<div class="price">
-																868,00 ₽
-															</div>
-														</div>
-													</div>
-													<div class="product__footer">
-														<a href="#" class="button button-lg button-primary">
-															В корзину
-														</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="populars-goods__product product">
-											<div class="product__body">
-												<div class="product__header">
-													<a href="#" class="product-image__link">
-														<img class="product-image__image ibg" src="img/goods/image-3.webp" alt="Image">
-													</a>
-
-													<div class="product__stickers">
-														<span class="product__stickers-item product__stickers-item--favorite">
-															<svg class="action-item__svg">
-																<use xlink:href="img/icons/icons.svg#favorite"></use>
-															</svg>
-														</span>
-													</div>
-												</div>
-												<div class="product__wrapper">
-													<div class="product__content">
-														<h6 class="product__title">
-															Масло моторное
-														</h6>
-														<div class="product__descr">
-															<p>
-																LUKOIL GENESIS ARMORTECH 5W-40 LUKOIL GENESIS ARMORTECH 5W-40 LUKOIL GENESIS ARMORTECH 5W-40
-															</p>
-														</div>
-														<div class="product__price price-box">
-															<div class="price">
-																868,00 ₽
-															</div>
-														</div>
-													</div>
-													<div class="product__footer">
-														<a href="#" class="button button-lg button-primary">
-															В корзину
-														</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="populars-goods__product product">
-											<div class="product__body">
-												<div class="product__header">
-													<a href="#" class="product-image__link">
-														<img class="product-image__image ibg" src="img/goods/image-4.webp" alt="Image">
-													</a>
-
-													<div class="product__stickers">
-														<span class="product__stickers-item product__stickers-item--favorite">
-															<svg class="action-item__svg">
-																<use xlink:href="img/icons/icons.svg#favorite"></use>
-															</svg>
-														</span>
-													</div>
-												</div>
-												<div class="product__wrapper">
-													<div class="product__content">
-														<h6 class="product__title">
-															Масло моторное
-														</h6>
-														<div class="product__descr">
-															<p>
-																LUKOIL GENESIS ARMORTECH 5W-40 LUKOIL GENESIS ARMORTECH 5W-40 LUKOIL GENESIS ARMORTECH 5W-40
-															</p>
-														</div>
-														<div class="product__price price-box">
-															<div class="price">
-																868,00 ₽
-															</div>
-														</div>
-													</div>
-													<div class="product__footer">
-														<a href="#" class="button button-lg button-primary">
-															В корзину
-														</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="populars-goods__product product">
-											<div class="product__body">
-												<div class="product__header">
-													<a href="#" class="product-image__link">
-														<img class="product-image__image ibg" src="img/goods/image.webp" alt="Image">
-													</a>
-
-													<div class="product__stickers">
-														<span class="product__stickers-item product__stickers-item--favorite">
-															<svg class="action-item__svg">
-																<use xlink:href="img/icons/icons.svg#favorite"></use>
-															</svg>
-														</span>
-													</div>
-												</div>
-												<div class="product__wrapper">
-													<div class="product__content">
-														<h6 class="product__title">
-															Масло моторное
-														</h6>
-														<div class="product__descr">
-															<p>
-																LUKOIL GENESIS ARMORTECH 5W-40
-															</p>
-														</div>
-														<div class="product__price price-box">
-															<div class="price">
-																868,00 ₽
-															</div>
-														</div>
-													</div>
-													<div class="product__footer">
-														<a href="#" class="button button-lg button-primary">
-															В корзину
-														</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="populars-goods__product product">
-											<div class="product__body">
-												<div class="product__header">
-													<a href="#" class="product-image__link">
-														<img class="product-image__image ibg" src="img/goods/image-2.webp" alt="Image">
-													</a>
-
-													<div class="product__stickers">
-														<span class="product__stickers-item product__stickers-item--favorite">
-															<svg class="action-item__svg">
-																<use xlink:href="img/icons/icons.svg#favorite"></use>
-															</svg>
-														</span>
-													</div>
-												</div>
-												<div class="product__wrapper">
-													<div class="product__content">
-														<h6 class="product__title">
-															Масло моторное
-														</h6>
-														<div class="product__descr">
-															<p>
-																LUKOIL GENESIS ARMORTECH 5W-40 LUKOIL GENESIS ARMORTECH 5W-40 LUKOIL GENESIS ARMORTECH 5W-40
-															</p>
-														</div>
-														<div class="product__price price-box">
-															<div class="price">
-																868,00 ₽
-															</div>
-														</div>
-													</div>
-													<div class="product__footer">
-														<a href="#" class="button button-lg button-primary">
-															В корзину
-														</a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="populars-goods__button-catalog">
-										<a href="#" class="button button-xl button-primary">
-											В каталог
-										</a>
-									</div>
-								</div>
-							</div>
-							<!-- /.content-main__populars-goods populars-goods -->
-							<div class="content-main__contacts contacts-main-block section-margin-b-md">
-								<div class="contacts-main-block__content">
-									<span class="section-caption inline-block mb-6">
-										Наши контакты
-
-									</span>
-									<div class="contacts-main-block__body contacts-block">
-										<div class="contacts-block__line">
-											<span class="text-red font-extralight md:text-xl text-sm">
-												Телефон
-											</span>
-											<ul>
-												<li>
-													<a href="tel:+78722550506">
-														+7 (8722) 55-05-06
-
-													</a>
-												</li>
-												<li>
-													<a href="tel:+79887940000">
-														+7 (988)794-00-00
-													</a>
-												</li>
-											</ul>
-										</div>
-										<div class="contacts-block__line">
-											<span class="text-red font-extralight md:text-xl text-sm">
-												Электронная почта
-
-											</span>
-											<ul>
-												<li>
-													<a href="mailto:magma1962@yandex.ru">
-														magma1962@yandex.ru
-
-													</a>
-												</li>
-											</ul>
-										</div>
-										<div class="contacts-block__line">
-											<span class="text-red font-extralight md:text-xl text-sm">
-												Адрес
-
-											</span>
-											<ul>
-												<li>
-													г. Махачкала, пр. Казбекова, д. 306
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- /.content-main__contacts -->
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- /.main-page -->
+			<!-- /.catalog-page -->
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
