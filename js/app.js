@@ -1,6 +1,13 @@
 (() => {
     "use strict";
     const modules_flsModules = {};
+    function addLoadedClass() {
+        if (!document.documentElement.classList.contains("loading")) window.addEventListener("load", (function() {
+            setTimeout((function() {
+                document.documentElement.classList.add("loaded");
+            }), 0);
+        }));
+    }
     let _slideUp = (target, duration = 500, showmore = 0) => {
         if (!target.classList.contains("_slide")) {
             target.classList.add("_slide");
@@ -214,8 +221,8 @@
         }
     }
     function menuInit() {
-        if (document.querySelector(".icon-menu")) document.addEventListener("click", (function(e) {
-            if (bodyLockStatus && e.target.closest(".icon-menu")) {
+        if (document.querySelector(".menu__icon")) document.addEventListener("click", (function(e) {
+            if (bodyLockStatus && e.target.closest(".menu__icon")) {
                 bodyLockToggle();
                 document.documentElement.classList.toggle("menu-open");
             }
@@ -507,6 +514,25 @@
             return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(formRequiredItem.value);
         }
     };
+    function formQuantity() {
+        document.addEventListener("click", (function(e) {
+            let targetElement = e.target;
+            if (targetElement.closest("[data-quantity-plus]") || targetElement.closest("[data-quantity-minus]")) {
+                const valueElement = targetElement.closest("[data-quantity]").querySelector("[data-quantity-value]");
+                let value = parseInt(valueElement.value);
+                if (targetElement.hasAttribute("data-quantity-plus")) {
+                    value++;
+                    if (+valueElement.dataset.quantityMax && +valueElement.dataset.quantityMax < value) value = valueElement.dataset.quantityMax;
+                } else {
+                    --value;
+                    if (+valueElement.dataset.quantityMin) {
+                        if (+valueElement.dataset.quantityMin > value) value = valueElement.dataset.quantityMin;
+                    } else if (value < 1) value = 1;
+                }
+                targetElement.closest("[data-quantity]").querySelector("[data-quantity-value]").value = value;
+            }
+        }));
+    }
     class SelectConstructor {
         constructor(props, data = null) {
             let defaultConfig = {
@@ -5898,11 +5924,14 @@
                 slidesPerView: 3,
                 spaceBetween: 6,
                 speed: 800,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev"
+                },
                 breakpoints: {
                     320: {
                         slidesPerView: 2.2,
-                        spaceBetween: 6,
-                        autoHeight: true
+                        spaceBetween: 6
                     },
                     768: {
                         slidesPerView: 2.5,
@@ -5929,6 +5958,34 @@
                 speed: 800,
                 pagination: {
                     el: ".slide-certificates__slider .swiper-pagination",
+                    clickable: true
+                },
+                on: {}
+            });
+            new swiper_core_Swiper(".slide-news-wrap__slider", {
+                modules: [ Navigation, Pagination ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1,
+                spaceBetween: 6,
+                grabCursor: true,
+                speed: 800,
+                pagination: {
+                    el: ".slide-news-wrap__slider .swiper-pagination",
+                    clickable: true
+                },
+                on: {}
+            });
+            new swiper_core_Swiper(".slide-promo-wrap__slider", {
+                modules: [ Navigation, Pagination ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1,
+                spaceBetween: 6,
+                grabCursor: true,
+                speed: 800,
+                pagination: {
+                    el: ".slide-promo-wrap__slider .swiper-pagination",
                     clickable: true
                 },
                 on: {}
@@ -6183,12 +6240,24 @@
             }));
         }));
     };
+    const checkedCartAllCheckbox = () => {
+        const checkAll = document.querySelector(".checkbox-checked-all input");
+        const syncCheckboxes = document.querySelectorAll(".sync-checkbox input");
+        if (syncCheckboxes || checkAll) checkAll.addEventListener("change", (function() {
+            syncCheckboxes.forEach((function(checkbox) {
+                checkbox.checked = checkAll.checked;
+            }));
+        }));
+    };
     toggleCatalogMenu();
     toggleCatalogFilter();
     resetFilters();
     toggleLocationList();
+    checkedCartAllCheckbox();
     window["FLS"] = true;
+    addLoadedClass();
     menuInit();
     spollers();
     showMore();
+    formQuantity();
 })();

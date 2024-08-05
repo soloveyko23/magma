@@ -5,12 +5,20 @@
 	<title>HomePage</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240719120542">
+	<style>
+		body {
+			opacity: 0;
+		}
+
+		.loaded body {
+			opacity: 1;
+		}
+	</style>
+	<link rel="stylesheet" href="css/style.min.css?_v=20240805155425">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://cdn.tailwindcss.com?_v=20240719120542"></script>
+	<script src="https://cdn.tailwindcss.com?_v=20240805155425"></script>
 	<script>
 		tailwind.config = {
 			theme: {
@@ -71,7 +79,11 @@
 							<div class="flex items-center gap-3 justify-between">
 								<div class="flex items-center">
 									<a href="#" class="logo">
-										<img src="img/logo.webp" alt="Logo">
+
+										<picture>
+											<source media="(max-width:480px)" srcset="img/logo-mob.webp">
+											<img src="img/logo.webp" alt="Logo">
+										</picture>
 									</a>
 									<div class="header-logo__text xl:text-2xl lg:text-lg text-white uppercase lg:pl-14 pl-10 font-medium">
 										<p>интернет - магазин автомасел и запчастей</p>
@@ -116,12 +128,17 @@
 									<ul>
 										<li>
 											<a href="#">
-												Львoв
+												Бунайск
 											</a>
 										</li>
 										<li>
 											<a href="#">
-												Львoв
+												Дербент
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Каспийск
 											</a>
 										</li>
 									</ul>
@@ -1283,7 +1300,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240719120542"></script>
+	<script src="js/app.min.js?_v=20240805155425"></script>
 </body>
 
 </html>
