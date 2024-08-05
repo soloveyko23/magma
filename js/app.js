@@ -6242,9 +6242,17 @@
     };
     const checkedCartAllCheckbox = () => {
         const checkAll = document.querySelector(".checkbox-checked-all input");
+        if (!checkAll) {
+            console.error('Checkbox with class "checkbox-checked-all" not found');
+            return;
+        }
         const syncCheckboxes = document.querySelectorAll(".sync-checkbox input");
-        if (syncCheckboxes || checkAll) checkAll.addEventListener("change", (function() {
-            syncCheckboxes.forEach((function(checkbox) {
+        if (syncCheckboxes.length === 0) {
+            console.warn('No checkboxes with class "sync-checkbox" found');
+            return;
+        }
+        checkAll.addEventListener("change", (() => {
+            syncCheckboxes.forEach((checkbox => {
                 checkbox.checked = checkAll.checked;
             }));
         }));
